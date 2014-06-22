@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body>nav{
+	position:fixed;
+	width:100%;
+	height:100%;
+	text-align:center;
+	z-index:10;
+}
+
+body>nav #logo{
+	z-index:5000;
+	margin:15px;
+	top:20px;
+	left:20px;
+	position:absolute;
+	/*background-image:url(NAME.png);*/
+	background-repeat:no-repeat;
+}
+
+body>nav #toggle{
+	z-index:5000;
+	padding:15px;
+	margin:15px;
+	position:absolute;
+	top:20px;
+	right:20px;
+	background:#0C9;
+	-webkit-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-moz-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-o-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+body>nav #toggle .herbert{
+	height:4px;
+	width:24px;
+	margin: 10px 0;
+	background:black;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	transition:all 0.3s;
+}
+
+body>nav #toggle .herbert:before, #toggle .herbert:after{
+	content:'';
+	display:block;
+	height:4px;
+	width:24px;
+	background:black;
+	position:relative;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-o-transition:all 0.3s;
+	transition:all 0.3s;
+}
+
+body>nav #toggle .herbert:before{
+	top:-8px;
+}
+
+body>nav #toggle .herbert:after{
+	top:5px;
+}
+
+body>nav #toggle:hover .herbert:before{
+	top:-9px;
+}
+
+body>nav #toggle:hover .herbert:after{
+	top:6px;
+}
+
+body>nav.open #toggle{
+	background:#ff5050;
+}
+
+body>nav #toggle.open .herbert:before{
+	width:20px;
+	top:-5px;
+	right:3px;
+	-webkit-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-o-transform:rotate(-45deg);
+	transform:rotate(-45deg)
+}
+
+body>nav #toggle.open .herbert:after{
+	width:20px;
+	top:2px;
+	right:3px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	transform:rotate(45deg)
+}
+
+body>nav ul{
+	visibility:hidden;
+	top-margin:50px;
+	width:100%;
+	padding:0;
+	opacity:0;
+	vertical-align:middle;
+	-webkit-transform:perspective(600px) rotateX(10deg);
+	-moz-transform:perspective(600px) rotateX(10deg);
+	-ms-transform:perspective(600px) rotateX(10deg);
+	-o-transform:perspective(600px) rotateX(10deg);
+	transform:perspective(600px) rotateX(10deg);
+	-webkit-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-moz-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-o-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+body>nav ul li{
+	list-style:none;
+	text-align:center;
+	width:100%;
+}
+
+body>nav ul li a{
+	color:black;
+	font-size:60px;
+	display:block;
+	width:100%;
+	text-align:center;
+	text-decoration:none;
+}
+
+body>nav ul li a:visited{
+	color:black;
+	text-decoration:none;
+}
+
+body>nav.open ul{
+	top:50px;
+	background:#0C9;
+	text-align:center;
+	visibility:visible;
+	opacity:1;
+}
+
+body>nav .nav-background{
+	padding:40px;
+	z-index:1500;
+	position:absolute;
+	width:100%;
+	height:100%;
+	background:none;
+	opacity:0;
+	-webkit-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-moz-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	-o-transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+	transition:all 0.3s cubic-bezier(0.7, 0, 0.36, 0.63);
+}
+
+body>nav.open .nav-background{
+	background:#0C9;
+	opacity:1;
+}
+
+/*parallax css*/
+.bcg {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+	min-height:100%;
+}
+
+.hsContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.hsContent {
+	max-width: 700px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+.hsContent h2  {
+	color: #fff8de;
+	background-color: rgba(0,0,0,0.5);
+	padding: 10px 5px;
+	font-size: 35px;
+	line-height: 38px;
+	margin-bottom: 12px;
+}
+
+.hsContent p {
+	width: 400px;
+	color: #b2b2b2;
+}
+
+.hsContent a {
+	color: #b2b2b2;
+	text-decoration: underline;
+}
+
+/*slide 1*/
+#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
+#slide-1 .hsContent {
+	bottom: 200px;
+	top: auto;
+}
+
+/* Slide 2 */
+#slide-2 .bcg {background-image:url('../img/bcg_slide-2.jpg')}
+#slide-2 .hsContent {
+	margin-left: -450px;
+	bottom: 200px;
+	top: auto;
+}
+
