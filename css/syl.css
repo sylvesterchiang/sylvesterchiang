@@ -1,6 +1,32 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/*words*/
+@font-face{
+	font-family:intro;
+	src:url(../font/intro.otf);
+}
+
+.intro{font-family:intro;}
+.title{font-size:3.5em;}
+.small{font-size:1.4em;}
+.black{color:black;}
+.green{color:#0C9;}
+.white{color:white;}
+
+.left{float:left;}
+.vert{vertical-align:middle;}
+.shiftright{padding-left:250px;}
+.shiftdown{padding-top:100px;}
+
+/*shapes*/
+.circle{
+	border-radius :50%;
+	width:220px;
+	height:220px;
+}
+
+/*nav bar*/
 body>nav{
 	position:fixed;
 	width:100%;
@@ -183,7 +209,7 @@ body>nav.open .nav-background{
 }
 
 .hsContent {
-	max-width: 700px;
+	max-width: 900px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -199,7 +225,7 @@ body>nav.open .nav-background{
 }
 
 .hsContent p {
-	width: 400px;
+	width: 600px;
 	color: #b2b2b2;
 }
 
@@ -209,17 +235,16 @@ body>nav.open .nav-background{
 }
 
 /*slide 1*/
-#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
+#slide-1 .bcg {background-image:url('../pic/hello.png')}
 #slide-1 .hsContent {
-	bottom: 200px;
-	top: auto;
+	left:200px;
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url('../img/bcg_slide-2.jpg')}
+#slide-2 .bcg {background-image:url('../pic/balls.png')}
 #slide-2 .hsContent {
 	margin-left: -450px;
-	bottom: 200px;
-	top: auto;
+	top: 80px;
+	bottom: auto;
 }
 
