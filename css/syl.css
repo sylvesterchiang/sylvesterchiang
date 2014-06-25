@@ -7,13 +7,28 @@
 	src:url(../font/intro.otf);
 }
 
+.ptserif{
+    font-family:'PT Serif', 'serif';
+}
+
+.cgothic{
+    font-family:'century gothic', 'sans-serif'
+}
+
 .intro{font-family:intro;}
 .title{font-size:3.5em;}
-.small{font-size:1.4em;}
+.tiny{font-size:1.4em;}
+.med{font-size:2em;}
+.light{font-size:1em;}
 .black{color:black;}
 .green{color:#0C9;}
 .white{color:white;}
+.solid{opacity:1;}
 
+.center{
+    text-align:center;
+    vertical-align:middle;
+}
 .left{float:left;}
 .vert{vertical-align:middle;}
 .shiftright{padding-left:250px;}
@@ -22,8 +37,8 @@
 /*shapes*/
 .circle{
 	border-radius :50%;
-	width:220px;
-	height:220px;
+	width:300px;
+	height:300px;
 }
 
 /*nav bar*/
@@ -209,10 +224,9 @@ body>nav.open .nav-background{
 }
 
 .hsContent {
-	max-width: 900px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
+	max-width: 1300px;
+	position: relative;
+    margin:0 auto;
 }
 
 .hsContent h2  {
@@ -237,14 +251,86 @@ body>nav.open .nav-background{
 /*slide 1*/
 #slide-1 .bcg {background-image:url('../pic/hello.png')}
 #slide-1 .hsContent {
-	left:200px;
+    top:20%;
+	left:15%;
+}
+#slide-1 .hsContent .lower{
+    left:55%;
+    max-width:400px;
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url('../pic/balls.png')}
+#slide-2 .bcg {background-color:white;)}
 #slide-2 .hsContent {
-	margin-left: -450px;
-	top: 80px;
+    padding: 50px 0px;
 	bottom: auto;
 }
 
+/* Slide 3 */
+#slide-3 .bcg{background-color:#4B4D4C;}
+#slide-3 .hsContent{
+}
+
+.frame{
+    margin-top:30px;
+    padding: 20px 100px;
+}
+
+.work{
+    background-color:red;
+    padding:30px;
+}
+
+.about{
+}
+
+.cover{
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    padding:0;
+}
+
+#toronto{
+    background-image:url('../pic/toronto.jpg');
+}
+
+#library{
+    background-image:url('../pic/library.jpg');
+}
+
+#queens{
+    background-image:url('../pic/queens.jpg');
+}
+
+.screen{
+    background-color:rgba(0, 0, 0, 0.6);
+    padding:30px 50px;
+}
+
+.border{
+    margin:20px;
+}
+
+.whiteline{
+    height:2px;
+    width:40px;
+    background-color:white;
+    opacity:0.7;
+    margin:20px auto;
+
+}
+
+.spacer{
+    margin: 20px 0;
+}
+
+.footer{
+    background-color:black;
+    position:relative;
+    bottom:0px;
+    width:100%;
+    padding:20px;
+    margin:0px;
+    color:#A7A7B3
+}
